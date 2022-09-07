@@ -2,18 +2,29 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
+  Image,
   StatusBar,
+  Appearance,
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
+import darkModeStyles from './styles/darkMode';
+import lightModeStyles from './styles/lightMode';
 
 const App = () => {
 
   const [password, setPassword] = useState('');
+  const [visible, setVisible] = useState(false)
   const [passwordTwo, setPasswordTwo] = useState('');
   const [passwordThree, setPasswordThree] = useState('');
   const [passwordFour, setPasswordFour] = useState('');
+
+  const [theme, setTheme] = useState(Appearance.getColorScheme());
+
+  Appearance.addChangeListener((scheme) =>
+    setTheme(scheme.colorScheme)
+  )
 
   const characters = ["A", "B", "C", "D", "E", "F", "G", "H",
     "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
@@ -30,6 +41,7 @@ const App = () => {
     let passThree = '';
     let passFour = '';
     let passwordLength = 8;
+    setVisible(true);
 
     for (let i = 0; i < passwordLength; i++) {
       let randomIndex = Math.floor(Math.random() * characters.length);
@@ -48,74 +60,55 @@ const App = () => {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={theme === 'light' ? lightModeStyles.container : darkModeStyles.container}>
       <StatusBar hidden />
 
       <View style={styles.upperSection}>
-        <Text style={styles.title}>Generate a</Text>
-        <Text style={styles.subTitle}>random password</Text>
-        <Text style={styles.supportingText}>Never use an insecure password again</Text>
-        <TouchableOpacity style={styles.button} onPress={() => getRandomPassword()} activeOpacity={0.5}>
+        <Text style={theme === 'light' ? lightModeStyles.title : darkModeStyles.title}>Generate a </Text>
+        <Text style={theme === 'light' ? lightModeStyles.subTitle : darkModeStyles.subTitle}>random password </Text>
+        <Text style={theme === 'light' ? lightModeStyles.supportingText : darkModeStyles.supportingText}>
+          Never use an insecure password again
+        </Text>
+        <TouchableOpacity
+          activeOpacity={0.5}
+          onPress={() => getRandomPassword()}
+          style={theme === 'light' ? lightModeStyles.button : darkModeStyles.button}>
           <Text style={styles.btnText}>Generate passwords</Text>
         </TouchableOpacity>
       </View>
 
-      <View style={styles.partition}></View>
+      <View style={theme === 'light' ? lightModeStyles.partition : darkModeStyles.partition}></View>
 
       <View style={styles.bottomSection}>
-        <Text style={styles.passView}>{password}</Text>
-        <Text style={styles.passView}>{passwordTwo}</Text>
+        <View style={theme === 'light' ? lightModeStyles.passContainer : darkModeStyles.passContainer}>
+          <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{password}</Text>
+          {visible && <Image source={require('./assets/images/copy.png')} tintColor="white" />}
+        </View>
+        <View style={theme === 'light' ? lightModeStyles.passContainer : darkModeStyles.passContainer}>
+          <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordTwo}</Text>
+          {visible && <Image source={require('./assets/images/copy.png')} tintColor="white" />}
+        </View>
       </View>
 
       <View style={[styles.bottomSection, { marginTop: 20 }]}>
-        <Text style={styles.passView}>{passwordThree}</Text>
-        <Text style={styles.passView}>{passwordFour}</Text>
+        <View style={theme === 'light' ? lightModeStyles.passContainer : darkModeStyles.passContainer}>
+          <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordThree}</Text>
+          {visible && <Image source={require('./assets/images/copy.png')} tintColor="white" />}
+        </View>
+        <View style={theme === 'light' ? lightModeStyles.passContainer : darkModeStyles.passContainer}>
+          <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordFour}</Text>
+          {visible && <Image source={require('./assets/images/copy.png')} tintColor="white" />}
+        </View>
       </View>
+
     </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#1F2937'
-  },
   upperSection: {
     marginTop: '50%',
     marginHorizontal: 20,
-  },
-  title: {
-    fontSize: 30,
-    color: 'white',
-    fontWeight: '800',
-    fontFamily: 'Karla-Bold',
-  },
-  subTitle: {
-    fontSize: 30,
-    color: '#4ADF86',
-    fontWeight: '800',
-    fontFamily: 'Karla-Bold',
-  },
-  supportingText: {
-    fontSize: 17,
-    marginTop: 10,
-    color: '#D5D4D8',
-    fontFamily: 'Inter-Regular',
-  },
-  button: {
-    height: 50,
-    width: 230,
-    marginTop: 30,
-    borderWidth: 1,
-    borderRadius: 6,
-    borderColor: 'green',
-    backgroundColor: '#10B981',
-
-    //shadow 
-    elevation: 10,
-    shadowColor: "rgba(0,0,0,0.5)",
-    overflow: 'hidden',
-    borderColor: 'transparent'
   },
   btnText: {
     flex: 1,
@@ -125,28 +118,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter-Regular',
     textAlignVertical: 'center',
   },
-  partition: {
-    borderWidth: 1,
-    marginVertical: 50,
-    marginHorizontal: 20,
-    borderColor: '#2F3E53'
-  },
   bottomSection: {
     flexDirection: 'row',
     marginHorizontal: 20,
     justifyContent: 'space-around',
   },
-  passView: {
-    height: 50,
-    width: '45%',
-    color: '#55F991',
-    borderRadius: 5,
-    fontSize: 14,
-    textAlign: 'center',
-    backgroundColor: '#273549',
-    textAlignVertical: 'center',
-    fontFamily: 'Inter-Regular',
-  }
 })
 
 export default App

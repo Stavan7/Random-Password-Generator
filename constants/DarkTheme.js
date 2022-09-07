@@ -4,8 +4,9 @@ const darkTheme = {
     supportingText: '#D5D4D8',
     btnBg: '#10B981',
     divider: '#2F3E53',
-    input: '#273549',
-    heading:'#fff'
+    inputBg: '#273549',
+    heading: '#fff',
+    inputText: '#55F991'
 }
 
 export default darkTheme;

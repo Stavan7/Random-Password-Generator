@@ -6,27 +6,23 @@ const lightModeStyles = StyleSheet.create({
         flex: 1,
         backgroundColor: lightTheme.background
     },
-    upperSection: {
-        marginTop: '50%',
-        marginHorizontal: 20,
-    },
     title: {
         fontSize: 30,
+        fontWeight: '500',
         color: lightTheme.heading,
-        fontWeight: '400',
         fontFamily: 'Karla-Bold',
     },
     subTitle: {
         fontSize: 30,
-        color: lightTheme.subText,
-        fontWeight: '400',
+        fontWeight: '500',
         fontFamily: 'Karla-Bold',
+        color: lightTheme.subText,
     },
     supportingText: {
         fontSize: 17,
         marginTop: 10,
-        color: lightTheme.supportingText,
         fontFamily: 'Inter-Bold',
+        color: lightTheme.supportingText,
     },
     button: {
         height: 50,
@@ -37,17 +33,9 @@ const lightModeStyles = StyleSheet.create({
 
         //shadow 
         elevation: 10,
-        shadowColor: "rgba(0,0,0,0.5)",
         overflow: 'hidden',
-        borderColor: 'transparent'
-    },
-    btnText: {
-        flex: 1,
-        fontSize: 18,
-        color: 'white',
-        textAlign: 'center',
-        fontFamily: 'Inter-Regular',
-        textAlignVertical: 'center',
+        borderColor: 'transparent',
+        shadowColor: "rgba(0,0,0,0.5)",
     },
     partition: {
         borderWidth: 1,
@@ -55,31 +43,26 @@ const lightModeStyles = StyleSheet.create({
         marginHorizontal: 20,
         borderColor: lightTheme.divider
     },
-    bottomSection: {
-        flexDirection: 'row',
-        marginHorizontal: 20,
-        justifyContent: 'space-around',
-    },
     passContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
         height: 50,
         width: '45%',
-        color: '#55F991',
-        borderRadius: 5,
         fontSize: 14,
+        borderRadius: 5,
         textAlign: 'center',
-        backgroundColor: lightTheme.input,
+        alignItems: 'center',
+        flexDirection: 'row',
         textAlignVertical: 'center',
         fontFamily: 'Inter-Regular',
+        color: lightTheme.inputText,
+        justifyContent: 'space-around',
+        backgroundColor: lightTheme.inputBg,
     },
     passText: {
-        color: lightTheme.inputText,
         fontSize: 16,
         textAlign: 'center',
         textAlignVertical: 'center',
         fontFamily: 'Inter-Regular',
+        color: lightTheme.inputText,
     }
 })
 
