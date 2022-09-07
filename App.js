@@ -24,12 +24,13 @@ const App = () => {
     "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[",
     "}", "]", ",", "|", ":", ";", "<", ">", ".", "?", "/"];
 
-  const getRandomPassword = () => {
+  const getRandomPassword = async () => {
     let pass = '';
     let passTwo = '';
     let passThree = '';
     let passFour = '';
     let passwordLength = 8;
+
     for (let i = 0; i < passwordLength; i++) {
       let randomIndex = Math.floor(Math.random() * characters.length);
       let randomIndexTwo = Math.floor(Math.random() * characters.length);
@@ -39,7 +40,6 @@ const App = () => {
       passTwo += characters[randomIndexTwo];
       passThree += characters[randomIndexThree];
       passFour += characters[randomIndexFour];
-
     }
     setPassword(pass);
     setPasswordTwo(passTwo)
@@ -50,6 +50,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar hidden />
+
       <View style={styles.upperSection}>
         <Text style={styles.title}>Generate a</Text>
         <Text style={styles.subTitle}>random password</Text>
@@ -71,7 +72,6 @@ const App = () => {
         <Text style={styles.passView}>{passwordFour}</Text>
       </View>
     </SafeAreaView>
-
   )
 }
 
@@ -87,13 +87,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     color: 'white',
-    fontWeight: '400',
+    fontWeight: '800',
     fontFamily: 'Karla-Bold',
   },
   subTitle: {
     fontSize: 30,
     color: '#4ADF86',
-    fontWeight: '400',
+    fontWeight: '800',
     fontFamily: 'Karla-Bold',
   },
   supportingText: {
