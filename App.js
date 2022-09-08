@@ -115,14 +115,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: 'white',
     textAlign: 'center',
-    fontFamily: 'Inter-Regular',
+    fontFamily: 'Inter-Medium',
     textAlignVertical: 'center',
   },
   bottomSection: {
     flexDirection: 'row',
     marginHorizontal: 20,
     justifyContent: 'space-around',
-  },
+  }
 })
 
 export default App

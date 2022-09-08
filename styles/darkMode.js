@@ -7,21 +7,19 @@ const darkModeStyles = StyleSheet.create({
         backgroundColor: darkTheme.background
     },
     title: {
-        fontSize: 30,
-        fontWeight: '500',
+        fontSize: 30, 
         color: darkTheme.heading,
         fontFamily: 'Karla-Bold',
     },
     subTitle: {
-        fontSize: 30,
-        fontWeight: '500',
+        fontSize: 30, 
         fontFamily: 'Karla-Bold',
         color: darkTheme.subText,
     },
     supportingText: {
         fontSize: 17,
         marginTop: 10,
-        fontFamily: 'Inter-Bold',
+        fontFamily: 'Inter-Meduim',
         color: darkTheme.supportingText,
     },
     button: {

@@ -53,6 +53,7 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Inter-VariableFont_slnt,wght.ttf</string>
 		<string>Inter-Black.ttf</string>
 		<string>Inter-Bold.ttf</string>
 		<string>Inter-ExtraBold.ttf</string>
@@ -62,10 +63,22 @@
 		<string>Inter-Regular.ttf</string>
 		<string>Inter-SemiBold.ttf</string>
 		<string>Inter-Thin.ttf</string>
+		<string>Karla-Italic-VariableFont_wght.ttf</string>
+		<string>Karla-VariableFont_wght.ttf</string>
 		<string>Karla-Bold.ttf</string>
 		<string>Karla-BoldItalic.ttf</string>
+		<string>Karla-ExtraBold.ttf</string>
+		<string>Karla-ExtraBoldItalic.ttf</string>
+		<string>Karla-ExtraLight.ttf</string>
+		<string>Karla-ExtraLightItalic.ttf</string>
 		<string>Karla-Italic.ttf</string>
+		<string>Karla-Light.ttf</string>
+		<string>Karla-LightItalic.ttf</string>
+		<string>Karla-Medium.ttf</string>
+		<string>Karla-MediumItalic.ttf</string>
 		<string>Karla-Regular.ttf</string>
+		<string>Karla-SemiBold.ttf</string>
+		<string>Karla-SemiBoldItalic.ttf</string>
 	</array>
 </dict>
 </plist>

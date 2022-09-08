@@ -2,108 +2,172 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "assets/fonts/Inter/Inter-Black.ttf",
-      "sha1": "03287c0ecb3eced46937e165843beb5e2f115554"
-    },
-    {
-      "path": "assets/fonts/Inter/Inter-Bold.ttf",
-      "sha1": "f20a8379025481abf1e48ecff21476b7bdf250e6"
-    },
-    {
-      "path": "assets/fonts/Inter/Inter-ExtraBold.ttf",
-      "sha1": "604c714b97f3db29b90157e6620179e3acd81909"
-    },
-    {
-      "path": "assets/fonts/Inter/Inter-ExtraLight.ttf",
-      "sha1": "d5c660a9bf4e1e4e8d2eb5c41d5865532112f5a0"
-    },
-    {
-      "path": "assets/fonts/Inter/Inter-Light.ttf",
-      "sha1": "5b46ebdc2513c3236ac6a509d6860d60c08182d5"
-    },
-    {
-      "path": "assets/fonts/Inter/Inter-Medium.ttf",
-      "sha1": "f2e3f4b0c02fc2c0c3223aa0d5e4dfc32a266b45"
-    },
-    {
-      "path": "assets/fonts/Inter/Inter-Regular.ttf",
-      "sha1": "c47afdca3b107b58fc636380e94d78f2c664a5af"
-    },
-    {
-      "path": "assets/fonts/Inter/Inter-SemiBold.ttf",
-      "sha1": "a7da962604d540f7024f23ee655c5aaac779978f"
-    },
-    {
-      "path": "assets/fonts/Inter/Inter-Thin.ttf",
-      "sha1": "050d767137b9bc5d07fbf974ab22a001c4fb21a9"
+      "path": "assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf",
+      "sha1": "44b415f3b0ac1da7f3044ba6bcc542a649d4a447"
     },
     {
       "path": "assets/fonts/Inter/OFL.txt",
       "sha1": "54e9fe5ec52517c18769b33222c4c721b942502f"
     },
     {
-      "path": "assets/fonts/karla/FONTLOG.txt",
-      "sha1": "03cdf16fcaa0f1c900fc020a38a62fbc771a6b7b"
+      "path": "assets/fonts/Inter/README.txt",
+      "sha1": "7f8751ad30252050976f5618eb8bd93bc0f09e62"
     },
     {
-      "path": "assets/fonts/karla/Karla-Bold.ttf",
-      "sha1": "487058030d1b878884eb61ae0d0fd8ec5d506f99"
+      "path": "assets/fonts/Inter/static/Inter-Black.ttf",
+      "sha1": "283fa65b96dc1f2d71c6504afb9610447bdcdf1b"
     },
     {
-      "path": "assets/fonts/karla/Karla-BoldItalic.ttf",
-      "sha1": "e3e3ccb6fb1f80e7a3a730fe7d0ea1b900fd97b4"
+      "path": "assets/fonts/Inter/static/Inter-Bold.ttf",
+      "sha1": "48747b7a60086f97af0d373febcbd1f1bee87f17"
     },
     {
-      "path": "assets/fonts/karla/Karla-Italic.ttf",
-      "sha1": "e75b9b09097b4122068844291b9c220a1ef53612"
+      "path": "assets/fonts/Inter/static/Inter-ExtraBold.ttf",
+      "sha1": "bff772be6bca9895c6fdcd57e5d5be9a47f2e058"
     },
     {
-      "path": "assets/fonts/karla/Karla-Regular.ttf",
-      "sha1": "b3fd3a3b0bf40b0704edaa17dfa49121ff84bb7e"
+      "path": "assets/fonts/Inter/static/Inter-ExtraLight.ttf",
+      "sha1": "421072aef8610cb0f79661b494442a4b9363b43f"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-Light.ttf",
+      "sha1": "dd9ec1ae67dd85143bacf7a3cb37e9f0ac979843"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-Medium.ttf",
+      "sha1": "a418a8ba73bbcfa8c131c426ab836d78457afa9b"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-Regular.ttf",
+      "sha1": "7237d9cf55f177702066a28a4dde1e4c7e8ab576"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-SemiBold.ttf",
+      "sha1": "431007da316de60d85174aeec9b8389b5c73e7d6"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-Thin.ttf",
+      "sha1": "297919d59c9ba4fa17251cdb9f06c26ca906e593"
+    },
+    {
+      "path": "assets/fonts/karla/Karla-Italic-VariableFont_wght.ttf",
+      "sha1": "1ce37ea1ffb09348b536a3a567ff3c34b5a8ec63"
+    },
+    {
+      "path": "assets/fonts/karla/Karla-VariableFont_wght.ttf",
+      "sha1": "f664520374b6760a97c1c9656251bb34bea8a9d8"
     },
     {
       "path": "assets/fonts/karla/OFL.txt",
-      "sha1": "e9be25c55f46e5aa55fe74dd28e903e41525be76"
+      "sha1": "9e680fed01d081bb05ec0241bf3fb96459124ed0"
     },
     {
-      "path": "assets/fonts/Inter/Inter-Black.ttf",
-      "sha1": "03287c0ecb3eced46937e165843beb5e2f115554"
+      "path": "assets/fonts/karla/README.txt",
+      "sha1": "317c3316de76f302b7d5649b4b0a481c650eb2a6"
     },
     {
-      "path": "assets/fonts/Inter/Inter-Bold.ttf",
-      "sha1": "f20a8379025481abf1e48ecff21476b7bdf250e6"
+      "path": "assets/fonts/karla/static/Karla-Bold.ttf",
+      "sha1": "e43476d9509fb03868df27d0d9e84f13560d3605"
     },
     {
-      "path": "assets/fonts/Inter/Inter-ExtraBold.ttf",
-      "sha1": "604c714b97f3db29b90157e6620179e3acd81909"
+      "path": "assets/fonts/karla/static/Karla-BoldItalic.ttf",
+      "sha1": "728715e91463cd13ddf4398490d455c45e9c45d4"
     },
     {
-      "path": "assets/fonts/Inter/Inter-ExtraLight.ttf",
-      "sha1": "d5c660a9bf4e1e4e8d2eb5c41d5865532112f5a0"
+      "path": "assets/fonts/karla/static/Karla-ExtraBold.ttf",
+      "sha1": "ab60125bff8ec78e97c5d2da7bf7f5a0867f723e"
     },
     {
-      "path": "assets/fonts/Inter/Inter-Light.ttf",
-      "sha1": "5b46ebdc2513c3236ac6a509d6860d60c08182d5"
+      "path": "assets/fonts/karla/static/Karla-ExtraBoldItalic.ttf",
+      "sha1": "74d19e7f958833a5fc18aa5f4a4a3a5716ff6a10"
     },
     {
-      "path": "assets/fonts/Inter/Inter-Medium.ttf",
-      "sha1": "f2e3f4b0c02fc2c0c3223aa0d5e4dfc32a266b45"
+      "path": "assets/fonts/karla/static/Karla-ExtraLight.ttf",
+      "sha1": "a05b5234ca0ebbc5824bfcc967354d8646441e60"
     },
     {
-      "path": "assets/fonts/Inter/Inter-Regular.ttf",
-      "sha1": "c47afdca3b107b58fc636380e94d78f2c664a5af"
+      "path": "assets/fonts/karla/static/Karla-ExtraLightItalic.ttf",
+      "sha1": "cf4d576153b58e15527b459da8915aba9290bef2"
     },
     {
-      "path": "assets/fonts/Inter/Inter-SemiBold.ttf",
-      "sha1": "a7da962604d540f7024f23ee655c5aaac779978f"
+      "path": "assets/fonts/karla/static/Karla-Italic.ttf",
+      "sha1": "b99fbb07c5a40275116b745ba964faccf5f2a1e6"
     },
     {
-      "path": "assets/fonts/Inter/Inter-Thin.ttf",
-      "sha1": "050d767137b9bc5d07fbf974ab22a001c4fb21a9"
+      "path": "assets/fonts/karla/static/Karla-Light.ttf",
+      "sha1": "f497b415db464a455d9d01120a07765f773e17dd"
+    },
+    {
+      "path": "assets/fonts/karla/static/Karla-LightItalic.ttf",
+      "sha1": "39b1a62e0cd94f7e8fbddf438fe702d62ffa15ca"
+    },
+    {
+      "path": "assets/fonts/karla/static/Karla-Medium.ttf",
+      "sha1": "15d3289b2a679f4efa90fe8a8f4da94030c1672f"
+    },
+    {
+      "path": "assets/fonts/karla/static/Karla-MediumItalic.ttf",
+      "sha1": "fd364dfa824b2d1bb27eec9701b25bfed007eeea"
+    },
+    {
+      "path": "assets/fonts/karla/static/Karla-Regular.ttf",
+      "sha1": "0f239aa4f2a6cd8a69d5cc71e0c05601c80b62d0"
+    },
+    {
+      "path": "assets/fonts/karla/static/Karla-SemiBold.ttf",
+      "sha1": "87ecea40f62014ac2f67ec3772e7847945552b71"
+    },
+    {
+      "path": "assets/fonts/karla/static/Karla-SemiBoldItalic.ttf",
+      "sha1": "6f29e274751e0de38776d1ffa03e7e89410131ab"
+    },
+    {
+      "path": "assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf",
+      "sha1": "44b415f3b0ac1da7f3044ba6bcc542a649d4a447"
     },
     {
       "path": "assets/fonts/Inter/OFL.txt",
       "sha1": "54e9fe5ec52517c18769b33222c4c721b942502f"
+    },
+    {
+      "path": "assets/fonts/Inter/README.txt",
+      "sha1": "7f8751ad30252050976f5618eb8bd93bc0f09e62"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-Black.ttf",
+      "sha1": "283fa65b96dc1f2d71c6504afb9610447bdcdf1b"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-Bold.ttf",
+      "sha1": "48747b7a60086f97af0d373febcbd1f1bee87f17"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-ExtraBold.ttf",
+      "sha1": "bff772be6bca9895c6fdcd57e5d5be9a47f2e058"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-ExtraLight.ttf",
+      "sha1": "421072aef8610cb0f79661b494442a4b9363b43f"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-Light.ttf",
+      "sha1": "dd9ec1ae67dd85143bacf7a3cb37e9f0ac979843"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-Medium.ttf",
+      "sha1": "a418a8ba73bbcfa8c131c426ab836d78457afa9b"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-Regular.ttf",
+      "sha1": "7237d9cf55f177702066a28a4dde1e4c7e8ab576"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-SemiBold.ttf",
+      "sha1": "431007da316de60d85174aeec9b8389b5c73e7d6"
+    },
+    {
+      "path": "assets/fonts/Inter/static/Inter-Thin.ttf",
+      "sha1": "297919d59c9ba4fa17251cdb9f06c26ca906e593"
     }
   ]
 }
