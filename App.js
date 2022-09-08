@@ -3,6 +3,7 @@ import {
   View,
   Text,
   Image,
+  Modal,
   StatusBar,
   Appearance,
   StyleSheet,
@@ -11,6 +12,7 @@ import {
 } from 'react-native';
 import darkModeStyles from './styles/darkMode';
 import lightModeStyles from './styles/lightMode';
+import Clipboard from '@react-native-clipboard/clipboard';
 
 const App = () => {
 
@@ -19,12 +21,33 @@ const App = () => {
   const [passwordTwo, setPasswordTwo] = useState('');
   const [passwordThree, setPasswordThree] = useState('');
   const [passwordFour, setPasswordFour] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
 
   const [theme, setTheme] = useState(Appearance.getColorScheme());
 
   Appearance.addChangeListener((scheme) =>
     setTheme(scheme.colorScheme)
   )
+
+  const copyToClipboard = () => {
+    Clipboard.setString(password);
+    setModalVisible(true)
+  };
+
+  const copyToClipboardTwo = () => {
+    Clipboard.setString(passwordTwo);
+    setModalVisible(true)
+  };
+
+  const copyToClipboardThree = () => {
+    Clipboard.setString(passwordThree);
+    setModalVisible(true)
+  };
+
+  const copyToClipboardFour = () => {
+    Clipboard.setString(passwordFour);
+    setModalVisible(true)
+  };
 
   const characters = ["A", "B", "C", "D", "E", "F", "G", "H",
     "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
@@ -82,24 +105,61 @@ const App = () => {
       <View style={styles.bottomSection}>
         <View style={theme === 'light' ? lightModeStyles.passContainer : darkModeStyles.passContainer}>
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{password}</Text>
-          {visible && <Image source={require('./assets/images/copy.png')} tintColor="white" />}
+          {
+            visible &&
+            <TouchableOpacity onPress={copyToClipboard} activeOpacity={0.7}>
+              <Image source={require('./assets/images/copy.png')} tintColor="white" />
+            </TouchableOpacity>
+          }
         </View>
         <View style={theme === 'light' ? lightModeStyles.passContainer : darkModeStyles.passContainer}>
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordTwo}</Text>
-          {visible && <Image source={require('./assets/images/copy.png')} tintColor="white" />}
+          {
+            visible &&
+            <TouchableOpacity onPress={copyToClipboardTwo} activeOpacity={0.7}>
+              <Image source={require('./assets/images/copy.png')} tintColor="white" />
+            </TouchableOpacity>
+          }
         </View>
       </View>
 
       <View style={[styles.bottomSection, { marginTop: 20 }]}>
         <View style={theme === 'light' ? lightModeStyles.passContainer : darkModeStyles.passContainer}>
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordThree}</Text>
-          {visible && <Image source={require('./assets/images/copy.png')} tintColor="white" />}
+          {
+            visible &&
+            <TouchableOpacity onPress={copyToClipboardThree} activeOpacity={0.7}>
+              <Image source={require('./assets/images/copy.png')} tintColor="white" />
+            </TouchableOpacity>
+          }
         </View>
         <View style={theme === 'light' ? lightModeStyles.passContainer : darkModeStyles.passContainer}>
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordFour}</Text>
-          {visible && <Image source={require('./assets/images/copy.png')} tintColor="white" />}
+          {
+            visible &&
+            <TouchableOpacity onPress={copyToClipboardFour} activeOpacity={0.7}>
+              <Image source={require('./assets/images/copy.png')} tintColor="white" />
+            </TouchableOpacity>
+          }
         </View>
       </View>
+
+      {/* Modal */}
+
+      {/* <View style={styles.centeredView}>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          hardwareAccelerated={true}
+        >
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Text style={styles.modalText}>copied to clipboard</Text>
+            </View>
+          </View>
+        </Modal>
+      </View > */}
 
     </SafeAreaView>
   )
@@ -122,6 +182,35 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginHorizontal: 20,
     justifyContent: 'space-around',
+  },
+
+  //modal view
+
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalView: {
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 20,
+    alignItems: 'center',
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5
+  },
+  modalText: {
+    color: 'black',
+    fontSize: 16,
+    textAlign: "center",
+    fontFamily: 'Inter-Medium'
   }
 })
 
