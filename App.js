@@ -17,10 +17,11 @@ import Clipboard from '@react-native-clipboard/clipboard';
 const App = () => {
 
   const [password, setPassword] = useState('');
-  const [visible, setVisible] = useState(false)
   const [passwordTwo, setPasswordTwo] = useState('');
   const [passwordThree, setPasswordThree] = useState('');
   const [passwordFour, setPasswordFour] = useState('');
+
+  const [visible, setVisible] = useState(false)
   const [modalVisible, setModalVisible] = useState(false);
 
   const [theme, setTheme] = useState(Appearance.getColorScheme());
@@ -28,26 +29,6 @@ const App = () => {
   Appearance.addChangeListener((scheme) =>
     setTheme(scheme.colorScheme)
   )
-
-  const copyToClipboard = () => {
-    Clipboard.setString(password);
-    setModalVisible(true)
-  };
-
-  const copyToClipboardTwo = () => {
-    Clipboard.setString(passwordTwo);
-    setModalVisible(true)
-  };
-
-  const copyToClipboardThree = () => {
-    Clipboard.setString(passwordThree);
-    setModalVisible(true)
-  };
-
-  const copyToClipboardFour = () => {
-    Clipboard.setString(passwordFour);
-    setModalVisible(true)
-  };
 
   const characters = ["A", "B", "C", "D", "E", "F", "G", "H",
     "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
@@ -58,19 +39,26 @@ const App = () => {
     "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[",
     "}", "]", ",", "|", ":", ";", "<", ">", ".", "?", "/"];
 
-  const getRandomPassword = async () => {
+  setTimeout(() => {
+    setModalVisible(false)
+  }, 3000);
+
+  const getRandomPassword = () => {
     let pass = '';
     let passTwo = '';
     let passThree = '';
     let passFour = '';
     let passwordLength = 8;
+
     setVisible(true);
 
     for (let i = 0; i < passwordLength; i++) {
+
       let randomIndex = Math.floor(Math.random() * characters.length);
       let randomIndexTwo = Math.floor(Math.random() * characters.length);
       let randomIndexThree = Math.floor(Math.random() * characters.length);
       let randomIndexFour = Math.floor(Math.random() * characters.length);
+
       pass += characters[randomIndex];
       passTwo += characters[randomIndexTwo];
       passThree += characters[randomIndexThree];
@@ -107,7 +95,7 @@ const App = () => {
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{password}</Text>
           {
             visible &&
-            <TouchableOpacity onPress={copyToClipboard} activeOpacity={0.7}>
+            <TouchableOpacity onPress={() => { Clipboard.setString(password); setModalVisible(true) }}>
               <Image source={require('./assets/images/copy.png')} tintColor="white" />
             </TouchableOpacity>
           }
@@ -116,7 +104,7 @@ const App = () => {
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordTwo}</Text>
           {
             visible &&
-            <TouchableOpacity onPress={copyToClipboardTwo} activeOpacity={0.7}>
+            <TouchableOpacity onPress={() => { Clipboard.setString(passwordTwo); setModalVisible(true) }}>
               <Image source={require('./assets/images/copy.png')} tintColor="white" />
             </TouchableOpacity>
           }
@@ -128,7 +116,7 @@ const App = () => {
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordThree}</Text>
           {
             visible &&
-            <TouchableOpacity onPress={copyToClipboardThree} activeOpacity={0.7}>
+            <TouchableOpacity onPress={() => { Clipboard.setString(passwordThree); setModalVisible(true) }}>
               <Image source={require('./assets/images/copy.png')} tintColor="white" />
             </TouchableOpacity>
           }
@@ -137,7 +125,7 @@ const App = () => {
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordFour}</Text>
           {
             visible &&
-            <TouchableOpacity onPress={copyToClipboardFour} activeOpacity={0.7}>
+            <TouchableOpacity onPress={() => { Clipboard.setString(passwordFour); setModalVisible(true) }}>
               <Image source={require('./assets/images/copy.png')} tintColor="white" />
             </TouchableOpacity>
           }
@@ -146,9 +134,9 @@ const App = () => {
 
       {/* Modal */}
 
-      {/* <View style={styles.centeredView}>
+      <View style={styles.centeredView}>
         <Modal
-          animationType="slide"
+          animationType="fade"
           transparent={true}
           visible={modalVisible}
           hardwareAccelerated={true}
@@ -159,7 +147,7 @@ const App = () => {
             </View>
           </View>
         </Modal>
-      </View > */}
+      </View >
 
     </SafeAreaView>
   )
@@ -188,8 +176,9 @@ const styles = StyleSheet.create({
 
   centeredView: {
     flex: 1,
-    justifyContent: "center",
+    marginBottom: 20,
     alignItems: "center",
+    justifyContent: "flex-end",
   },
   modalView: {
     backgroundColor: "white",
