@@ -4,6 +4,7 @@ import {
   Text,
   Image,
   Modal,
+  Pressable,
   StatusBar,
   Appearance,
   StyleSheet,
@@ -95,18 +96,30 @@ const App = () => {
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{password}</Text>
           {
             visible &&
-            <TouchableOpacity onPress={() => { Clipboard.setString(password); setModalVisible(true) }}>
+            <Pressable onPress={() => {
+              Clipboard.setString(password);
+              setModalVisible(true)
+            }}
+              hitSlop={10}
+              android_ripple
+              renderToHardwareTextureAndroid>
               <Image source={require('./assets/images/copy.png')} tintColor="white" />
-            </TouchableOpacity>
+            </Pressable>
           }
         </View>
         <View style={theme === 'light' ? lightModeStyles.passContainer : darkModeStyles.passContainer}>
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordTwo}</Text>
           {
             visible &&
-            <TouchableOpacity onPress={() => { Clipboard.setString(passwordTwo); setModalVisible(true) }}>
+            <Pressable onPress={() => {
+              Clipboard.setString(passwordTwo);
+              setModalVisible(true)
+            }}
+              hitSlop={10}
+              android_ripple
+              renderToHardwareTextureAndroid>
               <Image source={require('./assets/images/copy.png')} tintColor="white" />
-            </TouchableOpacity>
+            </Pressable>
           }
         </View>
       </View>
@@ -116,18 +129,30 @@ const App = () => {
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordThree}</Text>
           {
             visible &&
-            <TouchableOpacity onPress={() => { Clipboard.setString(passwordThree); setModalVisible(true) }}>
+            <Pressable onPress={() => {
+              Clipboard.setString(passwordThree);
+              setModalVisible(true)
+            }}
+              hitSlop={10}
+              android_ripple
+              renderToHardwareTextureAndroid>
               <Image source={require('./assets/images/copy.png')} tintColor="white" />
-            </TouchableOpacity>
+            </Pressable>
           }
         </View>
         <View style={theme === 'light' ? lightModeStyles.passContainer : darkModeStyles.passContainer}>
           <Text style={theme === 'light' ? lightModeStyles.passText : darkModeStyles.passText}>{passwordFour}</Text>
           {
             visible &&
-            <TouchableOpacity onPress={() => { Clipboard.setString(passwordFour); setModalVisible(true) }}>
+            <Pressable onPress={() => {
+              Clipboard.setString(passwordFour);
+              setModalVisible(true)
+            }}
+              hitSlop={10}
+              android_ripple
+              renderToHardwareTextureAndroid>
               <Image source={require('./assets/images/copy.png')} tintColor="white" />
-            </TouchableOpacity>
+            </Pressable>
           }
         </View>
       </View>
