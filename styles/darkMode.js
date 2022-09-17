@@ -7,12 +7,12 @@ const darkModeStyles = StyleSheet.create({
         backgroundColor: darkTheme.background
     },
     title: {
-        fontSize: 30, 
+        fontSize: 30,
         color: darkTheme.heading,
         fontFamily: 'Karla-Bold',
     },
     subTitle: {
-        fontSize: 30, 
+        fontSize: 30,
         fontFamily: 'Karla-Bold',
         color: darkTheme.subText,
     },
@@ -61,6 +61,14 @@ const darkModeStyles = StyleSheet.create({
         textAlignVertical: 'center',
         fontFamily: 'Inter-Regular',
         color: darkTheme.inputText,
+    },
+    footerMain: {
+        fontFamily: 'Inter-Bold',
+        color: darkTheme.supportingText,
+    },
+    footerName: {
+        fontFamily: 'Inter-Bold',
+        color: darkTheme.subText,
     }
 })
 

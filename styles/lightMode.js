@@ -7,12 +7,12 @@ const lightModeStyles = StyleSheet.create({
         backgroundColor: lightTheme.background
     },
     title: {
-        fontSize: 30, 
+        fontSize: 30,
         color: lightTheme.heading,
         fontFamily: 'Karla-Bold',
     },
     subTitle: {
-        fontSize: 30, 
+        fontSize: 30,
         fontFamily: 'Karla-Bold',
         color: lightTheme.subText,
     },
@@ -61,6 +61,14 @@ const lightModeStyles = StyleSheet.create({
         textAlignVertical: 'center',
         fontFamily: 'Inter-Regular',
         color: lightTheme.inputText,
+    },
+    footerMain: {
+        fontFamily: 'Inter-Bold',
+        color: lightTheme.supportingText,
+    },
+    footerName: {
+        fontFamily: 'Inter-Bold',
+        color: lightTheme.inputBg,
     }
 })
 

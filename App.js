@@ -4,6 +4,7 @@ import {
   Text,
   Image,
   Modal,
+  Linking,
   Pressable,
   StatusBar,
   Appearance,
@@ -79,7 +80,7 @@ const App = () => {
         <Text style={theme === 'light' ? lightModeStyles.title : darkModeStyles.title}>Generate a </Text>
         <Text style={theme === 'light' ? lightModeStyles.subTitle : darkModeStyles.subTitle}>random password </Text>
         <Text style={theme === 'light' ? lightModeStyles.supportingText : darkModeStyles.supportingText}>
-          Never use an insecure password again
+          Secure your log-in easily
         </Text>
         <TouchableOpacity
           activeOpacity={0.5}
@@ -157,6 +158,12 @@ const App = () => {
         </View>
       </View>
 
+      <View style={styles.footer}>
+        <Text style={theme === 'light' ? lightModeStyles.footerMain : darkModeStyles.footerMain}>Created by </Text>
+        <Text style={theme === 'light' ? lightModeStyles.footerName : darkModeStyles.footerName}
+          onPress={() => Linking.openURL('https://github.com/Stavan7')} hitSlop={20}>Stavan</Text>
+      </View>
+
       {/* Modal */}
 
       <View style={styles.centeredView}>
@@ -195,6 +202,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginHorizontal: 20,
     justifyContent: 'space-around',
+  },
+  footer: {
+    bottom: 15,
+    position: 'absolute',
+    flexDirection: 'row',
+    alignSelf: 'center'
   },
 
   //modal view
